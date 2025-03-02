@@ -21,6 +21,10 @@ function agregarAmigo() {
 }
 
 function sortearAmigo() {
+    if (listaDeNombres.length < 2) {
+        alert("no hay suficientes integrantes para realizar el sorteo");
+        return;
+    }
     let nombreSorteado = parseInt(Math.random()*listaDeNombres.length);
     let resultadoSorteo = document.createElement("li")
     resultadoSorteo.textContent = `el amigo secreto es: ${listaDeNombres[nombreSorteado]}`;
